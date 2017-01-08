@@ -21,72 +21,17 @@ class DefinitionViewController: UIViewController {
     
     
     @IBOutlet weak var emojiLabel: UILabel!
-    var emoji = "NO EMOJI"
+    var emoji = Emoji()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
-        emojiLabel.text = emoji
-        
-        
-        
-        if emoji == "😎" {
-            definitionLabel.text = "Cool Guy!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "😉" {
-            definitionLabel.text = "Hey Sexy!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "😏" {
-            definitionLabel.text = "Yeah, Ok..."
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "🙃" {
-            definitionLabel.text = "Do You Think I'm Stupid!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "😂" {
-            definitionLabel.text = "HAHAHAHAHAHA!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "😬" {
-            definitionLabel.text = "PLEEEEASSEEEE!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "😍" {
-            definitionLabel.text = "YOU'RE HOT!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "😘" {
-            definitionLabel.text = "KISSES!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "😭" {
-            definitionLabel.text = "WHYYYYYY!"
-            categoryLabel.text = "Category: Smiley Faces"
-            introYearLabel.text = "Intro Year: 2011"
-        }
-        if emoji == "🤷🏻‍♂️" {
-            definitionLabel.text = "OH WELL!"
-            categoryLabel.text = "Category: People"
-            introYearLabel.text = "Intro Year: 2016"
-        }
-        if emoji == "💩" {
-            definitionLabel.text = "SHIT!"
-            categoryLabel.text = "Category: Funny Expressions"
-            introYearLabel.text = "Intro Year: 2007"
-        }
+        emojiLabel.text = emoji.stringEmoji
+        introYearLabel.text = "Intro Year: \(emoji.introYear)"
+        categoryLabel.text = "Category: \(emoji.category)"
+        definitionLabel.text = emoji.definition
         
         
         
